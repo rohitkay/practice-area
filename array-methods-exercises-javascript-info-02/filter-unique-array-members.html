@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function unique(arr) {
+        /* your code */
+            let history = [];
+            for (let item of arr){
+                if (history.indexOf(item) >= 0){
+                    continue;
+                }
+                else{
+                    history.push(item);
+                }
+            }
+            return history;
+        }
+
+        let strings = ["Hare", "Krishna", "Hare", "Krishna",
+        "Krishna", "Krishna", "Hare", "Hare", ":-O"
+        ];
+
+        alert( unique(strings) ); // Hare, Krishna, :-O
+    </script>
+</body>
+</html>
